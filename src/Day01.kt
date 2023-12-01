@@ -24,7 +24,7 @@ fun main() {
         val (_, l) = s.findAnyOf(digits.keys) ?: return 0
         val (_, r) = s.findLastAnyOf(digits.keys, s.length)
             ?: throw IllegalStateException()
-        return "${digits[l]}${digits[r]}".toInt()
+        return digits[l]!! * 10 + digits[r]!!
     }
 
     fun calibrationSum(input: List<String>): Int =
