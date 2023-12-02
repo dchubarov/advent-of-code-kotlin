@@ -49,5 +49,5 @@ fun main() {
     )
     check(calibrationSum(testInput2) == 281)
 
-    calibrationSum(readInput("Day01_test")).println()
+    calibrationSum(readInput("Day01")).println()
 }
