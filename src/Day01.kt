@@ -1,3 +1,8 @@
+/**
+ * [Day 1](https://adventofcode.com/2023/day/1)
+ *
+ * @author dchubarov
+ */
 fun main() {
     val digits = mapOf(
         "1" to 1,
