@@ -15,3 +15,7 @@ tasks {
         gradleVersion = "8.4"
     }
 }
+
+dependencies {
+    testImplementation(kotlin("test"))
+}
