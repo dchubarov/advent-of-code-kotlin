@@ -7,10 +7,8 @@ repositories {
 }
 
 tasks {
-    sourceSets {
-        main {
-            java.srcDirs("src")
-        }
+    test {
+        useJUnitPlatform()
     }
 
     wrapper {
