@@ -1,7 +1,5 @@
 package org.twowls.lab.aoc.anno2023.day05
 
-import org.twowls.lab.aoc.anno2023.day05.Almanac
-import org.twowls.lab.aoc.anno2023.day05.addRange
 import kotlin.test.BeforeTest
 import kotlin.test.Test
 import kotlin.test.assertEquals
