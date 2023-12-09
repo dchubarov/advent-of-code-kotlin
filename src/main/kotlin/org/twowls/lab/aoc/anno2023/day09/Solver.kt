@@ -1,7 +1,7 @@
-package day09
+package org.twowls.lab.aoc.anno2023.day09
 
-import println
-import readInput
+import org.twowls.lab.aoc.common.println
+import org.twowls.lab.aoc.common.readInput
 
 fun Collection<Int>.extrapolateBothEnds(): Pair<Int, Int> {
     if (isEmpty())
@@ -38,6 +38,7 @@ fun main() {
     check(listOf(1, 3, 6, 10, 15, 21).extrapolateBothEnds() == 0 to 28)
     check(listOf(10, 13, 16, 21, 30, 45).extrapolateBothEnds() == 5 to 68)
 
+    // Part 1 & 2
     readInput("Day09")
         .map { it.split(" ").filter(String::isNotBlank).map(String::toInt).extrapolateBothEnds() }
         .reduce { acc, p -> (acc.first + p.first) to (acc.second + p.second) }

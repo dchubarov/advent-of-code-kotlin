@@ -1,7 +1,8 @@
-package day08
+package org.twowls.lab.aoc.anno2023.day08
 
-import println
-import readInput
+import org.twowls.lab.aoc.common.lcmBig
+import org.twowls.lab.aoc.common.println
+import org.twowls.lab.aoc.common.readInput
 
 fun numberOfSteps(
     directions: String,
@@ -32,16 +33,7 @@ fun numberOfGhostSteps(
     val distances = waypoints.keys.filter(entrypointPredicate)
         .map { numberOfSteps(directions, waypoints, it, targetPredicate) }
 
-    val increment = distances.min()
-    var temp = increment.toLong()
-    while (!distances.all { temp % it == 0L }) {
-        temp += increment
-    }
-
-    // Also known as Least Common Multiple (LCM)
-    // https://www.geeksforgeeks.org/lcm-of-given-array-elements/
-
-    return temp
+    return distances.lcmBig().longValueExact()
 }
 
 fun main() {

@@ -1,8 +1,8 @@
-package day05
+package org.twowls.lab.aoc.anno2023.day05
 
 import java.util.*
 
-class Almanac {
+internal class Almanac {
     private val rangeComposite = listOf(
         "seed-to-soil",
         "soil-to-fertilizer",

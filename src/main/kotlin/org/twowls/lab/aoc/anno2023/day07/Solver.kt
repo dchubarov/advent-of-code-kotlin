@@ -1,9 +1,9 @@
-package day07
+package org.twowls.lab.aoc.anno2023.day07
 
-import println
-import readInput
+import org.twowls.lab.aoc.common.println
+import org.twowls.lab.aoc.common.readInput
 
-fun totalWinnings(data: List<Pair<Hand, Int>>) =
+internal fun totalWinnings(data: List<Pair<Hand, Int>>) =
     data
         .sortedBy { it.first }
         .mapIndexed { index: Int, handAndBid: Pair<Hand, Int> -> handAndBid.second * (index + 1) }

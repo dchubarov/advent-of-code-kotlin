@@ -1,9 +1,9 @@
-package day07
+package org.twowls.lab.aoc.anno2023.day07
 
 val DEFAULT_DECK = setOf('2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K', 'A')
 val JOKER_DECK = setOf('J', '2', '3', '4', '5', '6', '7', '8', '9', 'T', 'Q', 'K', 'A')
 
-class Hand(
+internal class Hand(
     private val covers: String,
     deck: Set<Char> = DEFAULT_DECK,
     wildcard: Char = Char.MIN_VALUE

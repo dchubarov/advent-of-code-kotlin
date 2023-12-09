@@ -1,6 +1,6 @@
-package day06
+package org.twowls.lab.aoc.anno2023.day06
 
-import println
+import org.twowls.lab.aoc.common.println
 
 fun main() {
     fun bsMost(t: Int, d: Long): Int {

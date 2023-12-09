@@ -1,7 +1,7 @@
-package day05
+package org.twowls.lab.aoc.anno2023.day05
 
-import println
-import readInput
+import org.twowls.lab.aoc.common.println
+import org.twowls.lab.aoc.common.readInput
 
 fun main() {
     val almanac = Almanac()

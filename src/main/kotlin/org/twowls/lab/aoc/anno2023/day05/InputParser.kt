@@ -1,6 +1,6 @@
-package day05
+package org.twowls.lab.aoc.anno2023.day05
 
-fun parseAlmanacInput(input: List<String>, almanac: Almanac, seeds: MutableList<Long>) {
+internal fun parseAlmanacInput(input: List<String>, almanac: Almanac, seeds: MutableList<Long>) {
     var activeMapper: RangeMap? = null
 
     for (line in input) {

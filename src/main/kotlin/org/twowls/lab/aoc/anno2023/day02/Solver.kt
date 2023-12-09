@@ -1,3 +1,8 @@
+package org.twowls.lab.aoc.anno2023.day02
+
+import org.twowls.lab.aoc.common.println
+import org.twowls.lab.aoc.common.readInput
+
 /**
  * [Day 2](https://adventofcode.com/2023/day/2)
  *
