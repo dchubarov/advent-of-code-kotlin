@@ -1,10 +1,14 @@
 package org.twowls.lab.aoc.common
 
-import java.math.BigInteger
+/**
+ * Calculates Greatest Common Divisor (GCD) of two numbers.
+ */
+tailrec fun gcd(a: Long, b: Long): Long =
+    if (b == 0L) a else gcd(b, a % b)
 
 /**
  * Calculates Least Common Multiple (LCM) for array of integers.
  */
-fun Iterable<Int>.lcmBig(): BigInteger =
-    map { BigInteger.valueOf(it.toLong()) }
-        .reduce { acc, num -> acc * num / acc.gcd(num) }
+fun Iterable<Int>.lcm(): Long =
+    map { it.toLong() }
+        .reduce { acc, num -> acc * num / gcd(acc, num) }

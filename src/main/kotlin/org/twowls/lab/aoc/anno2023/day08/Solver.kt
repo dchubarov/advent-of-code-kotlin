@@ -1,6 +1,6 @@
 package org.twowls.lab.aoc.anno2023.day08
 
-import org.twowls.lab.aoc.common.lcmBig
+import org.twowls.lab.aoc.common.lcm
 import org.twowls.lab.aoc.common.println
 import org.twowls.lab.aoc.common.readInput
 
@@ -33,7 +33,7 @@ fun numberOfGhostSteps(
     val distances = waypoints.keys.filter(entrypointPredicate)
         .map { numberOfSteps(directions, waypoints, it, targetPredicate) }
 
-    return distances.lcmBig().longValueExact()
+    return distances.lcm()
 }
 
 fun main() {
