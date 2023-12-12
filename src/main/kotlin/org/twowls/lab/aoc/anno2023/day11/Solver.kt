@@ -4,27 +4,11 @@ import org.twowls.lab.aoc.common.println
 import org.twowls.lab.aoc.common.readInput
 import java.util.*
 import kotlin.math.abs
-import kotlin.math.min
 
 private const val GALAXY_CHAR = '#'
 
-internal fun distance(
-    a: Pair<Int, Int>,
-    b: Pair<Int, Int>
-): Int {
-    val dx = abs(a.second - b.second)
-    val dy = abs(a.first - b.first)
-
-    return when {
-        dx == 0 -> dy
-        dy == 0 -> dx
-        dx == dy -> dx * 2
-        else -> {
-            val midpoint = min(a.first, b.first) + dy / 2 to min(a.second, b.second) + dx / 2
-            return distance(a, midpoint) + distance(midpoint, b)
-        }
-    }
-}
+internal fun distance(a: Pair<Int, Int>, b: Pair<Int, Int>): Int =
+    abs(a.first - b.first) + abs((a.second - b.second))
 
 fun main() {
     check(distance(6 to 1, 11 to 5) == 9)
