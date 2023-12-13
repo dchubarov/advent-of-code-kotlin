@@ -3,7 +3,7 @@ package org.twowls.lab.aoc.anno2023.day13
 internal data class Note(val data: List<String>) {
     val rows = object : Axis() {
         override val length: Int = data.size
-        override val orthogonalLength: Int = data[0].length
+        override val oppositeLength: Int = data[0].length
         override val summarizeFactor: Int = 100
         override fun getAt(coaxialIndex: Int, oppositeIndex: Int): Char =
             data[coaxialIndex][oppositeIndex]
@@ -11,14 +11,14 @@ internal data class Note(val data: List<String>) {
 
     val columns = object : Axis() {
         override val length: Int = data[0].length
-        override val orthogonalLength: Int = data.size
+        override val oppositeLength: Int = data.size
         override fun getAt(coaxialIndex: Int, oppositeIndex: Int): Char =
             data[oppositeIndex][coaxialIndex]
     }
 
     abstract inner class Axis {
         protected abstract val length: Int
-        protected abstract val orthogonalLength: Int
+        protected abstract val oppositeLength: Int
         protected open val summarizeFactor: Int = 1
 
         protected abstract fun getAt(coaxialIndex: Int, oppositeIndex: Int): Char
@@ -46,7 +46,7 @@ internal data class Note(val data: List<String>) {
 
         private fun compare(index1: Int, index2: Int): Int {
             var mismatchCount = 0
-            for (i in 0..<orthogonalLength) {
+            for (i in 0..<oppositeLength) {
                 if (getAt(index1, i) != getAt(index2, i))
                     if (++mismatchCount > 1)
                         return mismatchCount
