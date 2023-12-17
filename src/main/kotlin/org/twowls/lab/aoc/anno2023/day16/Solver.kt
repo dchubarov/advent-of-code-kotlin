@@ -90,11 +90,11 @@ fun main() {
         it.filter(String::isNotBlank).toList()
     }
 
-    // Part 01
-    traceContraptionLayout(testInput).println()
-
-    // Part 02
     val elapsedMillis = measureTimeMillis {
+        // Part 01
+        traceContraptionLayout(testInput).println()
+
+        // Part 02
         max(
             testInput.indices.maxOf {
                 max(
@@ -110,6 +110,5 @@ fun main() {
                 )
             }).println()
     }
-
     println("Elapsed time $elapsedMillis ms")
 }
