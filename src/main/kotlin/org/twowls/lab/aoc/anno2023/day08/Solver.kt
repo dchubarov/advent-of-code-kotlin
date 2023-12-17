@@ -1,8 +1,8 @@
 package org.twowls.lab.aoc.anno2023.day08
 
+import org.twowls.lab.aoc.common.cachedInput
 import org.twowls.lab.aoc.common.lcm
 import org.twowls.lab.aoc.common.println
-import org.twowls.lab.aoc.common.readInput
 
 fun numberOfSteps(
     directions: String,
@@ -78,7 +78,7 @@ fun main() {
         )
     )
 
-    val fullInput = readInput("Day08")
+    val fullInput = cachedInput(year = 2023, day = 8).readLines()
     val headerLine = fullInput.indexOfFirst { it.isNotBlank() }.also { check(it >= 0) }
     val directions = fullInput[headerLine]
     val waypoints = mutableMapOf<String, Pair<String, String>>()

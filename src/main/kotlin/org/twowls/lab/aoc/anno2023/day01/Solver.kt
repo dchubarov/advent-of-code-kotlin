@@ -1,7 +1,7 @@
 package org.twowls.lab.aoc.anno2023.day01
 
+import org.twowls.lab.aoc.common.cachedInput
 import org.twowls.lab.aoc.common.println
-import org.twowls.lab.aoc.common.readInput
 
 /**
  * [Day 1](https://adventofcode.com/2023/day/1)
@@ -59,5 +59,5 @@ fun main() {
     )
     check(calibrationSum(testInput2) == 281)
 
-    calibrationSum(readInput("Day01")).println()
+    calibrationSum(cachedInput(year = 2023, day = 1).readLines()).println()
 }

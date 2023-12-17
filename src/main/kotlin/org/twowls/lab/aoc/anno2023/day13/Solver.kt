@@ -1,8 +1,7 @@
 package org.twowls.lab.aoc.anno2023.day13
 
+import org.twowls.lab.aoc.common.cachedInput
 import org.twowls.lab.aoc.common.println
-import kotlin.io.path.Path
-import kotlin.io.path.useLines
 
 fun main() {
     val sampleNote1 = listOf(
@@ -30,7 +29,7 @@ fun main() {
     check(Note(sampleNote2).rows.summarize(smudge = 1) == 100)
 
     val notes = mutableListOf<Note>()
-    Path("data/Day13.txt").useLines {
+    cachedInput(year = 2023, day = 13).useLines {
         var noteInput = mutableListOf<String>()
         it.forEach { line ->
             if (line.isNotBlank()) {

@@ -1,7 +1,7 @@
 package org.twowls.lab.aoc.anno2023.day02
 
+import org.twowls.lab.aoc.common.cachedInput
 import org.twowls.lab.aoc.common.println
-import org.twowls.lab.aoc.common.readInput
 
 /**
  * [Day 2](https://adventofcode.com/2023/day/2)
@@ -75,7 +75,7 @@ fun main() {
         check(sumGamePower(it) == 2286)
     }
 
-    val fullInput = readInput("Day02")
+    val fullInput = cachedInput(year = 2023, day = 2).readLines()
     parseAllGames(fullInput).also {
         sumPossibleGames(it, maxRed = 12, maxGreen = 13, maxBlue = 14).println()
         sumGamePower(it).println()

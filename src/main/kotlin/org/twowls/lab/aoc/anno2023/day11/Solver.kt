@@ -1,7 +1,7 @@
 package org.twowls.lab.aoc.anno2023.day11
 
+import org.twowls.lab.aoc.common.cachedInput
 import org.twowls.lab.aoc.common.println
-import org.twowls.lab.aoc.common.readInput
 import java.util.*
 import kotlin.math.abs
 
@@ -31,7 +31,7 @@ fun main() {
         "#...#....."
     )
     */
-    val testInput = readInput("Day11")
+    val testInput = cachedInput(year = 2023, day = 11).readLines()
 
     val spaceRows = testInput.indices.toCollection(TreeSet())
     val spaceCols = (0..<testInput[0].length).toCollection(TreeSet())

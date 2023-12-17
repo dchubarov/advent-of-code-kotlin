@@ -1,7 +1,7 @@
 package org.twowls.lab.aoc.anno2023.day07
 
+import org.twowls.lab.aoc.common.cachedInput
 import org.twowls.lab.aoc.common.println
-import org.twowls.lab.aoc.common.readInput
 
 internal fun totalWinnings(data: List<Pair<Hand, Int>>) =
     data
@@ -13,7 +13,8 @@ fun main() {
     totalWinnings(listOf("32T3K" to 765, "T55J5" to 684, "KK677" to 28, "KTJJT" to 220, "QQQJA" to 483)
         .map { Hand(it.first, JOKER_DECK, 'J') to it.second }).println()
 
-    val fullInput = readInput("Day07")
+    val fullInput = cachedInput(year = 2023, day = 7)
+        .readLines()
         .map {
             it.split(" ").let { parts ->
                 parts[0] to parts[1].toInt()

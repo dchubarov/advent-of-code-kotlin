@@ -1,8 +1,7 @@
 package org.twowls.lab.aoc.anno2023.day15
 
+import org.twowls.lab.aoc.common.cachedInput
 import org.twowls.lab.aoc.common.println
-import kotlin.io.path.Path
-import kotlin.io.path.bufferedReader
 
 fun main() {
     fun CharSequence.hash(): Int =
@@ -41,7 +40,7 @@ fun main() {
 
 //    val sampleInput = "rn=1,cm-,qp=3,cm=2,qp-,pc=4,ot=9,ab=5,pc-,pc=6,ot=7"
     val sampleInput = sequence {
-        Path("data/Day15.txt").bufferedReader().use {
+        cachedInput(year = 2023, day = 15).bufferedReader().use {
             do {
                 val c = it.read()
                 if (c >= 0)

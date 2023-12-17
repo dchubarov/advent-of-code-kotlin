@@ -1,7 +1,7 @@
 package org.twowls.lab.aoc.anno2023.day04
 
+import org.twowls.lab.aoc.common.cachedInput
 import org.twowls.lab.aoc.common.println
-import org.twowls.lab.aoc.common.readInput
 
 fun main() {
 
@@ -41,7 +41,7 @@ fun main() {
     check(sumPoints(testInput) == 13)
     check(part2(testInput) == 30)
 
-    val fullInput = readInput("Day04")
+    val fullInput = cachedInput(year = 2023, day = 4).readLines()
     sumPoints(fullInput).println()
     part2(fullInput).println()
 }

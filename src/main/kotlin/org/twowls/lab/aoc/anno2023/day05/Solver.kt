@@ -1,12 +1,12 @@
 package org.twowls.lab.aoc.anno2023.day05
 
+import org.twowls.lab.aoc.common.cachedInput
 import org.twowls.lab.aoc.common.println
-import org.twowls.lab.aoc.common.readInput
 
 fun main() {
     val almanac = Almanac()
     val seeds = mutableListOf<Long>()
-    parseAlmanacInput(readInput("Day05"), almanac, seeds)
+    parseAlmanacInput(cachedInput(year = 2023, day = 5).readLines(), almanac, seeds)
 
     // Part 01
     seeds.minOf(almanac::mapValue).println()

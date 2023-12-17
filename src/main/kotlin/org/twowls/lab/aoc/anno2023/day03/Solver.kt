@@ -1,7 +1,7 @@
 package org.twowls.lab.aoc.anno2023.day03
 
+import org.twowls.lab.aoc.common.cachedInput
 import org.twowls.lab.aoc.common.println
-import org.twowls.lab.aoc.common.readInput
 
 fun findPartNumbers(input: List<String>) = sequence {
     val sc = Schematic(input)
@@ -37,7 +37,7 @@ fun main() {
     check(findPartNumbers(testInput).sum() == 4361)
     check(findGearRatios(testInput).sum() == 467835)
 
-    val fullInput = readInput("Day03")
+    val fullInput = cachedInput(year = 2023, day = 3).readLines()
     findPartNumbers(fullInput).sum().println()
     findGearRatios(fullInput).sum().println()
 }
