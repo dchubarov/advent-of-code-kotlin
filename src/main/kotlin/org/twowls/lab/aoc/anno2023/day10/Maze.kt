@@ -10,9 +10,9 @@ internal class Maze(private val tiles: List<String>) {
             .also { check(it.size == 2) }
 
         var step = 1
-        while (cu1.position != cu2.position) {
-            cu1 = cu1.advanceOrNull() ?: return -1
-            cu2 = cu2.advanceOrNull() ?: return -1
+        while (cu1?.position != cu2?.position) {
+            cu1 = cu1?.advanceOrNull() ?: return -1
+            cu2 = cu2?.advanceOrNull() ?: return -1
             step++
         }
         return step
